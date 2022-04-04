@@ -4,15 +4,14 @@ export const AllFriends = styled.ul`
     display: inline-block;
     list-style: none;
     margin: 0 auto;
-    padding: 0;
-    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 30px;
 `;
 
 export const Friend = styled.li`
     display: flex;
     align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;
     width: 200px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
