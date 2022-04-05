@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
 
 export const ProfileInfo = styled.div`
-    padding-left: 15px;
-    padding-right: 15px;
+    
 `;
 
 export const ProfilePhoto = styled.img`
@@ -41,8 +40,6 @@ export const ProfileLocation = styled.p`
 export const ProfileStatistics = styled.ul`
     width: 360px;
     display: flex;
-    padding-left: 15px;
-    padding-right: 15px;
     margin-top: 30px;
 `;
 

@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
 
 export const AllFriends = styled.ul`
-    padding-left: 15px;
-    padding-right: 15px;
     margin-top: 30px;
 `;
 
