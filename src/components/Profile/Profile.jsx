@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import { ProfilePage, ProfileInfo, ProfilePhoto, ProfileName, ProfileTag, ProfileLocation, ProfileStatistics, StatisticsItem, StatisticsLabel, StatisticsData } from "components/Profile/Profile.styled";
+import { ProfileInfo, ProfilePhoto, ProfileName, ProfileTag, ProfileLocation, ProfileStatistics, StatisticsItem, StatisticsLabel, StatisticsData } from "components/Profile/Profile.styled";
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <ProfilePage>
+    <div>
       <ProfileInfo>
         <ProfilePhoto
           src={avatar}
@@ -28,7 +28,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
           <StatisticsData> {stats.likes}</StatisticsData>
         </StatisticsItem>
       </ProfileStatistics>
-    </ProfilePage>
+    </div>
   )
 };
 

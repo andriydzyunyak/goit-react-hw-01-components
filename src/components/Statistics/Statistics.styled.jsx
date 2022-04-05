@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 
 export const SectionStat = styled.section`
-    width: 360px;
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 30px;
@@ -14,10 +13,9 @@ export const Title = styled.h2`
 `;
 
 export const StatList = styled.ul`
-    list-style: none;
-    display: inline-flex;
-    margin: 0 auto;
+    display: flex;
     padding: 0;
+    margin-top: 15px;
 `;
 
 export const StatItem = styled.li`
@@ -49,7 +47,6 @@ export const StatLabel = styled.span`
     margin: 0;
     padding: 0;
     display: block;
-    font-family: sans-serif;
     font-weight: bold;
     line-height: 1.4;
     font-size: 14px;
@@ -58,7 +55,6 @@ export const StatLabel = styled.span`
 export const StatData = styled.span`
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
     font-weight: bold;
     line-height: 1.4;
     font-size: 20px;

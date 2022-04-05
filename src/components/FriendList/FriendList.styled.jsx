@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
 
 export const AllFriends = styled.ul`
-    width: 360px;
-    list-style: none;
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 30px;
@@ -11,6 +9,7 @@ export const AllFriends = styled.ul`
 export const Friend = styled.li`
     display: flex;
     align-items: center;
+    padding: 8px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -22,12 +21,10 @@ export const Friend = styled.li`
 `;
 
 export const FriendPhoto = styled.img`
-    display: block;
     margin-right: 25px;
 `;
 
 export const FriendName = styled.p`
-    font-family: sans-serif;
     font-weight: bold;
     line-height: 1.4;
     font-size: 20px;

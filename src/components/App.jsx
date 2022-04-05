@@ -1,3 +1,4 @@
+import { SidebarContainer } from "components/Sidebar.styled";
 import { Profile } from 'components/Profile/Profile';
 import user from '../components/Profile/user.json';
 import { Statistics } from 'components/Statistics/Statistics';
@@ -7,7 +8,7 @@ import friends from '../components/FriendList/friends.json';
 
 export const App = () => {
   return (
-    <>
+    <SidebarContainer>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -17,6 +18,6 @@ export const App = () => {
       />
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends}/>
-    </>
+    </SidebarContainer>
   );
 };
