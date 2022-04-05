@@ -1,35 +1,34 @@
 import PropTypes from 'prop-types';
-import css from 'components/Profile/Profile.module.css';
+import { ProfilePage, ProfileInfo, ProfilePhoto, ProfileName, ProfileTag, ProfileLocation, ProfileStatistics, StatisticsItem, StatisticsLabel, StatisticsData } from "components/Profile/Profile.styled";
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img
+    <ProfilePage>
+      <ProfileInfo>
+        <ProfilePhoto
           src={avatar}
           alt="User avatar"
-          className={css.avatar}
         />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+        <ProfileName>{username}</ProfileName>
+        <ProfileTag> @{tag}</ProfileTag>
+        <ProfileLocation>{location}</ProfileLocation>
+      </ProfileInfo>
 
-      <ul className={css.stats}>
-        <li>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}> {stats.followers}</span>
-        </li>
-        <li>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}> {stats.views}</span>
-        </li>
-        <li>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}> {stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <ProfileStatistics>
+        <StatisticsItem>
+          <StatisticsLabel>Followers</StatisticsLabel>
+          <StatisticsData> {stats.followers}</StatisticsData>
+        </StatisticsItem>
+        <StatisticsItem>
+          <StatisticsLabel>Views</StatisticsLabel>
+          <StatisticsData> {stats.views}</StatisticsData>
+        </StatisticsItem>
+        <StatisticsItem>
+          <StatisticsLabel>Likes</StatisticsLabel>
+          <StatisticsData> {stats.likes}</StatisticsData>
+        </StatisticsItem>
+      </ProfileStatistics>
+    </ProfilePage>
   )
 };
 

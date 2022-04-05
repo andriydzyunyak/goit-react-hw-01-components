@@ -1,9 +1,8 @@
 import styled from "@emotion/styled";
 
 export const AllFriends = styled.ul`
-    display: inline-block;
+    width: 360px;
     list-style: none;
-    margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 30px;
@@ -12,12 +11,11 @@ export const AllFriends = styled.ul`
 export const Friend = styled.li`
     display: flex;
     align-items: center;
-    width: 200px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
     border-radius: 0px;
-
+    
     :not(:last-child) {
         margin-bottom: 10px;
     }
@@ -25,7 +23,7 @@ export const Friend = styled.li`
 
 export const FriendPhoto = styled.img`
     display: block;
-    margin-right: 10px;
+    margin-right: 25px;
 `;
 
 export const FriendName = styled.p`
@@ -39,8 +37,8 @@ export const Status = styled.span`
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 25px;
 
     background-color: ${({isOnline}) => { 
     switch (isOnline) { 
