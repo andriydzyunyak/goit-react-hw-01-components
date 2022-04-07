@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { SectionStat, Title, StatList, StatItem, StatLabel, StatData } from "components/Statistics/Statistics.styled";
 
-export const Statistics = ({ stats }) => {
+export const Statistics = ({ title, stats }) => {
     return (
         <SectionStat>
-            <Title>Upload stats</Title>
+            <Title>{title}</Title>
             <StatList>
                 {stats.map(({id, label, percentage}) => (
                     <StatItem key={id} name={label}>
@@ -18,6 +18,7 @@ export const Statistics = ({ stats }) => {
 };
 
 Statistics.propTypes = {
+    title: PropTypes.string.isRequired,
     stats: PropTypes.arrayOf(
         PropTypes.exact({
             id: PropTypes.string.isRequired,

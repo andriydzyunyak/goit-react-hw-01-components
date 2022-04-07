@@ -11,7 +11,7 @@ import {
   StatisticsData
 } from "components/Profile/Profile.styled";
 
-export const Profile = ({ username, tag, location, avatar, stats }) => {
+export const Profile = ({ username, tag, location, avatar, followers, views, likes }) => {
   return (
     <div>
       <ProfileInfo>
@@ -27,15 +27,15 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       <ProfileStatistics>
         <StatisticsItem>
           <StatisticsLabel>Followers</StatisticsLabel>
-          <StatisticsData> {stats.followers}</StatisticsData>
+          <StatisticsData> {followers}</StatisticsData>
         </StatisticsItem>
         <StatisticsItem>
           <StatisticsLabel>Views</StatisticsLabel>
-          <StatisticsData> {stats.views}</StatisticsData>
+          <StatisticsData> {views}</StatisticsData>
         </StatisticsItem>
         <StatisticsItem>
           <StatisticsLabel>Likes</StatisticsLabel>
-          <StatisticsData> {stats.likes}</StatisticsData>
+          <StatisticsData> {likes}</StatisticsData>
         </StatisticsItem>
       </ProfileStatistics>
     </div>
@@ -43,8 +43,13 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
 };
 
 Profile.propTypes = {
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: {
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }
 };
