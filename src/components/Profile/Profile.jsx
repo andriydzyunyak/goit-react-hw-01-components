@@ -11,7 +11,7 @@ import {
   StatisticsData
 } from "components/Profile/Profile.styled";
 
-export const Profile = ({ username, tag, location, avatar, followers, views, likes }) => {
+export const Profile = ({ username, tag, location, avatar, stats: {followers, views, likes} }) => {
   return (
     <div>
       <ProfileInfo>

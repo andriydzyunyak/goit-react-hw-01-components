@@ -4,7 +4,7 @@ import { SectionStat, Title, StatList, StatItem, StatLabel, StatData } from "com
 export const Statistics = ({ title, stats }) => {
     return (
         <SectionStat>
-            <Title>{title}</Title>
+            { title && <Title>{title}</Title>}
             <StatList>
                 {stats.map(({id, label, percentage}) => (
                     <StatItem key={id} name={label}>
@@ -18,7 +18,7 @@ export const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     stats: PropTypes.arrayOf(
         PropTypes.exact({
             id: PropTypes.string.isRequired,
